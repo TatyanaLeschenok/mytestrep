@@ -1,5 +1,3 @@
 test:
-pre:
-pwd:MyApplication
 override:
 - ./gradlew test
