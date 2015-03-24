@@ -1,6 +1,6 @@
 test:
 pre:
-cd MyApplication
+pwd: MyApplication
   override:
     # start the emulator
     #- emulator -avd circleci-android21 -no-audio -no-window:
