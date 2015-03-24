@@ -1,7 +1,6 @@
-dependencies:
-  override:
-        pwd:
-          MyApplication
 test:
-  override:
-    - ./gradlew test
+pre:
+pwd:
+MyApplication
+override:
+- ./gradlew test
