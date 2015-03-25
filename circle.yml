@@ -1,8 +1,8 @@
 general:
   build_dir: MyApplication
 test:
-override:
- # copy the build outputs to artifacts
+    override:
+    # copy the build outputs to artifacts
     - cp -r ClassPass/app/build/outputs/apk $CIRCLE_ARTIFACTS
     # copy the test results to the test results directory.
     - cp -r ClassPass/app/build/test-results/* $CIRCLE_TEST_RESULTS
