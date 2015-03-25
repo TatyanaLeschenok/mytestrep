@@ -1,11 +1,2 @@
-dependencies:
-  pre:
-    - chmod -x gradle
-
-  override:
-      - cd MyApplication
-    - ./gradlew dependencies
-
-test:
-  override:
-    - ./gradlew test
+general:
+  build_dir: MyApplication
