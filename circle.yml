@@ -1,6 +1,7 @@
-machine:
-  pwd:
-    MyApplication
+checkout:
+    - >
+      cd ../MyApplication;
+  
 
 dependencies:
   pre:
