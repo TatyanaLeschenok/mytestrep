@@ -1,7 +1,7 @@
 checkout:
   override:
     - >
-      cd ../MyApplication;
+      cd MyApplication;
   
 
 dependencies:
