@@ -3,8 +3,7 @@ dependencies:
     - chmod -x gradle
 
   override:
-      - >
-      cd MyApplication
+      - cd MyApplication
     - ./gradlew dependencies
 
 test:
