@@ -1,0 +1,14 @@
+machine:
+  pwd:
+    MyApplication
+
+dependencies:
+  pre:
+    - chmod -x gradle
+
+  override:
+    - ./gradlew dependencies
+
+test:
+  override:
+    - ./gradlew test
