@@ -3,6 +3,6 @@ general:
 test:
     override:
     # copy the build outputs to artifacts
-    - cp -r MyApplication/app/build/outputs/apk $CIRCLE_ARTIFACTS
+    - cp -r MyApplication/app/build/outputs/apk/ $CIRCLE_ARTIFACTS
     # copy the test results to the test results directory.
     - cp -r MyApplication/app/build/test-results/* $CIRCLE_TEST_RESULTS
