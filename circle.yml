@@ -3,4 +3,4 @@ general:
 test:
     override:
     # copy the test results to the test results directory.
-    - cp -r /MyApplication/app/build/test-results/* $CIRCLE_TEST_RESULTS
+    - cp -r mytestrep/MyApplication/app/build/test-results/* $CIRCLE_TEST_RESULTS
