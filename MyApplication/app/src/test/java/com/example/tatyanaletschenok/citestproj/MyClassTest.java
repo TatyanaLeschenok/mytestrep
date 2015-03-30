@@ -13,4 +13,10 @@ public class MyClassTest extends TestCase {
     public void testMethod() throws Exception {
         Assert.assertEquals(4, 4);
     }
+
+    @Test
+    public void testFail() throws Exception {
+        Assert.assertEquals(1, 2);
+    }
+
 }
