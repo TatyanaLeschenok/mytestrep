@@ -10,13 +10,16 @@ import org.junit.Test;
  */
 public class MyClassTest extends TestCase {
     @Test
-    public void testMethod() throws Exception {
-        Assert.assertEquals(4, 4);
+    public void testFirstMethod() throws Exception {
+        MyClass tmp = new MyClass();
+        Assert.assertEquals(tmp.firstMethod(), 1);
     }
 
     @Test
-    public void testFail() throws Exception {
-        Assert.assertEquals(1, 2);
+    public void testSecondMethod() throws Exception {
+        MyClass tmp = new MyClass();
+        tmp.secondMethod();
+        Assert.assertEquals(2, 2);
     }
 
 }
