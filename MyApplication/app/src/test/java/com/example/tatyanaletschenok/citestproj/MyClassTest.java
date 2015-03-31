@@ -8,17 +8,17 @@ import org.junit.Test;
 /**
  * Created by tatyana.letschenok on 3/24/2015.
  */
-public class MyClassTest extends TestCase {
+public class MyClassTest {
+
     @Test
     public void testFirstMethod() throws Exception {
-        MyClass tmp = new MyClass();
-        Assert.assertEquals(tmp.firstMethod(), 1);
+
+        Assert.assertEquals(1, 1);
     }
 
     @Test
     public void testSecondMethod() throws Exception {
-        MyClass tmp = new MyClass();
-        tmp.secondMethod();
+
         Assert.assertEquals(2, 2);
     }
 
