@@ -9,16 +9,22 @@ import org.junit.Test;
  * Created by tatyana.letschenok on 3/24/2015.
  */
 public class MyClassTest {
+    @Test
+    public void notNil() throws Exception {
+        MyClass tmp = new MyClass();
+        Assert.assertNotNull(tmp);
+    }
 
     @Test
     public void testFirstMethod() throws Exception {
-
-        Assert.assertEquals(1, 1);
+        MyClass tmp = new MyClass();
+        Assert.assertEquals(tmp.firstMethod(), 1);
     }
 
     @Test
     public void testSecondMethod() throws Exception {
-
+        MyClass tmp = new MyClass();
+        tmp.secondMethod();
         Assert.assertEquals(2, 2);
     }
 
