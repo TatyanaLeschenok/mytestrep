@@ -5,3 +5,8 @@ dependencies:
   - chmod +x gradlew
   - ./gradlew clean
   - ./gradlew tasks --all
+test:
+  post:
+  - ./gradlew jacocoTestReport
+  - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
+  - cp -r app/build/reports/jacoco/jacocoTestReport/* $CIRCLE_ARTIFACTS 
