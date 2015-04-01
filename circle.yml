@@ -1,10 +1,13 @@
 general:
   build_dir: MyApplication
+  banches:
+    only:
+    - master
 dependencies:
   pre:
   - chmod +x gradlew
   - ./gradlew clean
-  - ./gradlew tasks --all
+  #- ./gradlew tasks --all
 test:
   post:
   - ./gradlew jacocoTestReport
