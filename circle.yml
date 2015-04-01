@@ -3,5 +3,5 @@ general:
 dependencies:
   pre:
   - chmod +x gradlew
-  ./gradlew clean
-  ./gradlew tasks --all
+  - ./gradlew clean
+  - ./gradlew tasks --all
