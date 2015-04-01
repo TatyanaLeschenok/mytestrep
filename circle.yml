@@ -1,2 +1,5 @@
 general:
   build_dir: MyApplication
+dependencies:
+  pre:
+  chmod +x gradlew
