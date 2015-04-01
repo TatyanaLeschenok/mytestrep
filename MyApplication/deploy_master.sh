@@ -1,5 +1,6 @@
 build(){
-    /.gradlew assembleRelease crashlyticsUploadDistributionRelease
+    ./gradlew clean
+    #./gradlew assembleRelease crashlyticsUploadDistributionRelease
 }
 
 echo 'start building android'
