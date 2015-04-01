@@ -1,6 +1,6 @@
 general:
   build_dir: MyApplication
-  banches:
+  branches:
     only:
     - master
 dependencies:
