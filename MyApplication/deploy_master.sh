@@ -16,12 +16,19 @@ echo $versionKey=$versionCode > "app/version.properties"
 
 }
 
+setBuildVersion(){
+    versionKey="VERSION_CODE"    
+    touch "app/version.properties"
+    echo $versionKey=$APP_VERSION > "app/version.properties"
+}
+
 buildDebug(){
 echo 'upload debug build to Fabric'
     ./gradlew assembleDebug crashlyticsUploadDistributionDebug
 }
 
 echo 'start building android'
-incrementVersion
+#incrementVersion
+setBuildVersion
 buildDebug
 echo 'stop building android'
