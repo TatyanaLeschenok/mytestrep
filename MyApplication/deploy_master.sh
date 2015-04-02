@@ -17,7 +17,7 @@ echo $versionKey=$versionCode > "app/version.properties"
 }
 
 build(){
-    ./gradlew assembleRelease
+    ./gradlew assembleRelease crashlyticsUploadDistributionDebug
 }
 
 echo 'start building android'
