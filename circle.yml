@@ -3,6 +3,9 @@ general:
   branches:
     only:
     - master
+machine:
+  environment:
+    APP_VERSION: "6"
 dependencies:
   pre:
   - chmod +x gradlew
