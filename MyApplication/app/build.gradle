@@ -23,7 +23,7 @@ android {
     def versionPropsFile = file('version.properties')
 
     if (versionPropsFile.canRead()) {
-        
+
         def Properties versionProps = new Properties()
         versionProps.load(new FileInputStream(versionPropsFile))
         def vCode = versionProps['VERSION_CODE'].toInteger()
@@ -43,21 +43,11 @@ android {
         throw new GradleException("Could not read version.properties!")
     }
 
-    signingConfigs {
-        stageConfig {
-            storeFile file("tanya.jks")
-            storePassword "202batat0327"
-            keyAlias "tanya"
-            keyPassword "202batat0327"
-        }
-    }
-
     buildTypes {
         debug {
             testCoverageEnabled true
         }
         release {
-            signingConfig signingConfigs.stageConfig
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

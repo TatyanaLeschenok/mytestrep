@@ -9,17 +9,19 @@ case "$key" in
 $versionKey) versionCode="$value" ;
 esac
 done < "$file"
-echo $versionCode
+echo 'old version' $versionCode
 versionCode=$((versionCode+1))
-echo $versionCode
+echo 'new version' $versionCode
 echo $versionKey=$versionCode > "app/version.properties"
 
 }
 
-build(){
-    ./gradlew assembleRelease crashlyticsUploadDistributionDebug
+buildDebug(){
+echo 'upload debug build to Fabric'
+    ./gradlew assembleDebug crashlyticsUploadDistributionDebug
 }
 
 echo 'start building android'
 incrementVersion
+buildDebug
 echo 'stop building android'
