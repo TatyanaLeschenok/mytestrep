@@ -34,7 +34,6 @@ android {
             applicationId "com.classpass.classpass"
             minSdkVersion 18
             targetSdkVersion 21
-            buildConfigField 'String', 'CLASSPASS_API_ENDPOINT', "\"${DEV_ENPOINT_URL}\""
         }
     }
     else {
