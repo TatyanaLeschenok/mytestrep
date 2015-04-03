@@ -31,9 +31,9 @@ echo 'upload debug build to Fabric'
 }
 
 commitNewVersion(){
-git config user.name $CIRCLE_USERNAME
+git config --global user.name $CIRCLE_USERNAME
 git commit -m 'update build version [ci skip]'
-git push
+git config --global push.default simple
 }
 
 echo 'start building android'
