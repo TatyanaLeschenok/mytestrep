@@ -5,7 +5,8 @@ general:
     - master
 machine:
   environment:
-    APP_VERSION: "6"
+    APP_VERSION_CODE: "6"
+    APP_VERSION_NAME: "0.6.0"
 dependencies:
   pre:
   - chmod +x gradlew
