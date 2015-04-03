@@ -24,7 +24,7 @@ CIRCLE_SHA1
     nameKey="VERSION_NAME"
     touch "app/version.properties"
     echo $versionKey=$APP_VERSION_CODE > "app/version.properties"
-    echo $versionName=$APP_VERSION_NAME >> "app/version.properties"
+    echo $nameKey=$APP_VERSION_NAME >> "app/version.properties"
 }
 
 buildDebug(){
