@@ -19,7 +19,7 @@ echo $versionKey=$versionCode > "app/version.properties"
 setBuildVersion(){
     versionKey="VERSION_CODE"    
     touch "app/version.properties"
-    echo $versionKey=$APP_VERSION > "app/version.properties"
+    echo $versionKey=$CIRCLE_BUILD_NUM > "app/version.properties"
 }
 
 buildDebug(){
