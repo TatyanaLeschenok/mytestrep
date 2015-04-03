@@ -21,22 +21,20 @@ android {
     buildToolsVersion "21.1.2"
 
     def versionPropsFile = file('version.properties')
-
     if (versionPropsFile.canRead()) {
 
         def Properties versionProps = new Properties()
         versionProps.load(new FileInputStream(versionPropsFile))
         def vCode = versionProps['VERSION_CODE'].toInteger()
-        def vName = vCode.toString()+".0";
+        def vName = versionProps['VERSION_NAME']
 
         defaultConfig {
             versionCode vCode
             versionName vName
-            applicationId "com.example.tatyanaletschenok.citestproj"
+            applicationId "com.classpass.classpass"
             minSdkVersion 18
             targetSdkVersion 21
-            testApplicationId "com.example.tatyanaletschenok.citestproj.test"
-
+            buildConfigField 'String', 'CLASSPASS_API_ENDPOINT', "\"${DEV_ENPOINT_URL}\""
         }
     }
     else {

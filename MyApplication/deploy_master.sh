@@ -20,9 +20,11 @@ echo $versionKey=$versionCode > "app/version.properties"
 
 setBuildVersion(){
 CIRCLE_SHA1
-    versionKey="VERSION_CODE"    
+    versionKey="VERSION_CODE"
+    nameKey="VERSION_NAME"
     touch "app/version.properties"
-    echo $versionKey=$CIRCLE_BUILD_NUM > "app/version.properties"
+    echo $versionKey=$APP_VERSION_CODE > "app/version.properties"
+    echo $versionName=$APP_VERSION_NAME >> "app/version.properties"
 }
 
 buildDebug(){
@@ -42,8 +44,8 @@ git push
 }
 
 echo 'start building android'
-incrementVersion
-#setBuildVersion
+#incrementVersion
+setBuildVersion
 buildDebug
-commitNewVersion
+#commitNewVersion
 echo 'stop building android'
