@@ -33,7 +33,8 @@ echo 'upload debug build to Fabric'
 commitNewVersion(){
 echo $CIRCLE_USERNAME
 echo $CIRCLE_USEREMAIL
-git config --global user.name $CIRCLE_USERNAME
+git config user.name $CIRCLE_USERNAME
+git config user.email "circleci@abc.com"
 git commit -m 'update build version [ci skip]'
 git config --global push.default simple
 }
