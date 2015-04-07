@@ -29,7 +29,7 @@ CIRCLE_SHA1
 
 buildDebug(){
 echo 'upload debug build to Fabric'
-ext.betaDistributionGroupAliases=”test-group”
+ext.betaDistributionGroupAliases="test-group"
     ./gradlew assembleDebug crashlyticsUploadDistributionDebug
     cp -r app/build/outputs/apk/* $CIRCLE_ARTIFACTS
 }
