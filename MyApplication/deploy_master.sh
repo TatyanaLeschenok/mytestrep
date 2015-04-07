@@ -30,7 +30,7 @@ CIRCLE_SHA1
 buildDebug(){
 echo 'upload debug build to Fabric'
     ./gradlew assembleDebug crashlyticsUploadDistributionDebug
-    - cp -r app/build/outputs/apk/* $CIRCLE_ARTIFACTS
+    cp -r app/build/outputs/apk/* $CIRCLE_ARTIFACTS
 }
 
 commitNewVersion(){
