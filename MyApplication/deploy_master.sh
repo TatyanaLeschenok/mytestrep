@@ -29,12 +29,11 @@ CIRCLE_SHA1
 
 setupFabricNotifications(){
 touch "app/group_aliases.txt"
-echo  "batat-test" > "app/group_aliases.txt"
+echo  "batat-group" > "app/group_aliases.txt"
 }
 
 buildDebug(){
 echo 'upload debug build to Fabric'
-ext.betaDistributionGroupAliases="test-group"
     ./gradlew assembleDebug crashlyticsUploadDistributionDebug
     cp -r app/build/outputs/apk/* $CIRCLE_ARTIFACTS
 }
