@@ -27,6 +27,11 @@ CIRCLE_SHA1
     echo $nameKey=$APP_VERSION_NAME >> "app/version.properties"
 }
 
+setupFabricNotifications(){
+touch "app/group_aliases.txt"
+echo  "batat-test" > "app/group_aliases.txt"
+}
+
 buildDebug(){
 echo 'upload debug build to Fabric'
 ext.betaDistributionGroupAliases="test-group"
@@ -47,6 +52,7 @@ git push
 
 echo 'start building android'
 #incrementVersion
+setupFabricNotifications
 setBuildVersion
 buildDebug
 #commitNewVersion

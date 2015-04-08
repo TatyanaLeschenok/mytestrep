@@ -42,6 +42,7 @@ android {
 
     buildTypes {
         debug {
+            ext.betaDistributionGroupAliasesFilePath="app/group_aliases.txt"
             testCoverageEnabled true
         }
         release {
