@@ -33,8 +33,8 @@ echo  "batat-group" > "app/group_aliases.txt"
 }
 
 setupFabricReleaseNotes(){
-batat="10.0"
-releaseName="release $batat"
+version="11.0"
+releaseName="release $version"
 
 echo $releaseName
 
