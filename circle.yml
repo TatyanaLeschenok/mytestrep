@@ -14,7 +14,7 @@ dependencies:
   - appium &
   - which appium
   - pwd
-  - node ./home/ubuntu/nvm/v0.10.33/bin/appium/bin/appium-doctor.js
+  - node home/ubuntu/nvm/v0.10.33/bin/appium/bin/appium-doctor.js
   - chmod +x gradlew
   - ./gradlew clean
   #- ./gradlew tasks --all
