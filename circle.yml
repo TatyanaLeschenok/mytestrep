@@ -11,16 +11,9 @@ dependencies:
   pre:
   - chmod +x gradlew
   - ./gradlew clean
+  - brew install node
   #- ./gradlew tasks --all
-  post:
-  - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
-  - tar -xzf sc-latest-linux.tar.gz
 test:
-  override:
-  - ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -f ~/sc_ready:
-    background: true
-    pwd: sc-*-linux
-  - while [ ! -e ~/sc_ready ]; do sleep 1; done
   post:
   - ./gradlew jacocoTestReport
   - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
