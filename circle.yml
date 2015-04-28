@@ -12,6 +12,9 @@ dependencies:
   - chmod +x gradlew
   - ./gradlew clean
   #- ./gradlew tasks --all
+  post:
+  - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+  - tar -xzf sc-latest-linux.tar.gz
 test:
   post:
   - ./gradlew jacocoTestReport
