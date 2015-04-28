@@ -9,9 +9,9 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
+  - brew install node
   - chmod +x gradlew
   - ./gradlew clean
-  - brew install node
   #- ./gradlew tasks --all
 test:
   post:
