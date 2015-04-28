@@ -9,6 +9,7 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
+  - mvn -version
   - node --version
   - npm install -g appium
   - appium &
