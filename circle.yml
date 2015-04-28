@@ -10,6 +10,8 @@ machine:
 dependencies:
   pre:
   - node --version
+  - npm install -g appium
+  - appium &
   - chmod +x gradlew
   - ./gradlew clean
   #- ./gradlew tasks --all
