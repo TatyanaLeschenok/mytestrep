@@ -9,6 +9,8 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
+  - echo $ANDROID_HOME
+  - echo $JAVA_HOME
   - mvn -version
   - node --version
   - npm install -g appium
