@@ -16,8 +16,6 @@ dependencies:
   - npm install -g appium
   - appium &
   - which appium
-  - pwd:
-    home
   - node 'home/ubuntu/nvm/v0.10.33/bin/appium/bin/appium-doctor.js'
   - chmod +x gradlew
   - ./gradlew clean
