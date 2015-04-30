@@ -15,7 +15,10 @@ dependencies:
   - node --version
   - npm install -g appium
   - appium &
+  override:
   - which appium
+    pwd:
+     /home/ubuntu/nvm/v0.10.33/bin/appium
   - node appium
   - node 'home/ubuntu/nvm/v0.10.33/bin/appium/bin/appium-doctor.js'
   - chmod +x gradlew
