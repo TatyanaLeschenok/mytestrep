@@ -10,7 +10,7 @@ machine:
 dependencies:
   pre:
   - android list sdk
-  - echo y | android update sdk --no-ui --all --filter "add-on"
+  - echo y | android update sdk --no-ui --all --filter "32"
   - chmod +x gradlew
   - ./gradlew clean
   #- ./gradlew tasks --all
