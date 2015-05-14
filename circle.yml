@@ -9,9 +9,9 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
+  - echo y | android update sdk --no-ui --all --filter "com.google.android.gms:play-services:7.3.0"
   - chmod +x gradlew
   - ./gradlew clean
-  - echo y | android update sdk --no-ui --all --filter "com.google.android.gms:play-services:7.3.0"
   #- ./gradlew tasks --all
 test:
   post:
