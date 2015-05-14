@@ -17,6 +17,7 @@ dependencies:
   - appium &
   - chmod +x gradlew
   - ./gradlew clean
+  - echo y | android update sdk --no-ui --all --filter "com.google.android.gms:play-services:7.3.0"
   #- ./gradlew tasks --all
 test:
   post:
