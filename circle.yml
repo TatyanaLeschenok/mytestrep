@@ -9,6 +9,7 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
+  - android list sdk
   - echo y | android update sdk --no-ui --all --filter "add-on"
   - chmod +x gradlew
   - ./gradlew clean
