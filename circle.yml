@@ -9,7 +9,7 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
-  - echo y | android update sdk --no-ui --all --filter "com.google.android.gms:play-services"
+  - echo y | android update sdk --no-ui --all --filter "google_play_services_froyo"
   - chmod +x gradlew
   - ./gradlew clean
   #- ./gradlew tasks --all
