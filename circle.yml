@@ -18,6 +18,9 @@ dependencies:
   - ./gradlew clean
   #- ./gradlew tasks --all
 test:
+  override:
+    - appium -p 4723 -a 127.0.0.1
+    - mvn test
   post:
   - ./gradlew jacocoTestReport
   - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
