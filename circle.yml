@@ -9,7 +9,7 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
-  - nmp install -g appium  # get appium
+  - npm install -g appium  # get appium
   - npm install wd
   - appium -p 4723 -a 127.0.0.1
   - android list sdk
