@@ -9,8 +9,9 @@ machine:
     APP_VERSION_NAME: "0.11.0"
 dependencies:
   pre:
-  - install -g appium  # get appium
+  - nmp install -g appium  # get appium
   - npm install wd
+  - appium -p 4723 -a 127.0.0.1
   - android list sdk
   - echo y | android update sdk --no-ui --all --filter 'extra,131'
   - chmod +x gradlew
