@@ -19,7 +19,7 @@ dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      ./install_appium.sh
+      ./install_appium.sh;
       fi
   post:
     - appium -p 4723 -a 127.0.0.1:
