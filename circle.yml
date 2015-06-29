@@ -3,7 +3,9 @@ general:
   branches:
     only:
     - master
-machine:
+# machine:
+  
+dependencies:
   pre:
   - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
@@ -14,15 +16,14 @@ machine:
     - appium -p 4723 -a 127.0.0.1:
         background: true
     - sleep 5
-dependencies:
-  pre:
-  - npm install -g appium  # get appium
-  - npm install wd
-  - appium -p 4723 -a 127.0.0.1
-  - android list sdk
-  - echo y | android update sdk --no-ui --all --filter 'extra,131'
-  - chmod +x gradlew
-  - ./gradlew clean
+  # pre:
+  # - npm install -g appium  # get appium
+  # - npm install wd
+  # - appium -p 4723 -a 127.0.0.1
+  # - android list sdk
+  # - echo y | android update sdk --no-ui --all --filter 'extra,131'
+  # - chmod +x gradlew
+  # - ./gradlew clean
   #- ./gradlew tasks --all
 #test:
 #  override:
