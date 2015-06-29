@@ -7,7 +7,7 @@ machine:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      ./mytestrep/MyApplication/install_appium.sh;
+      ls -la;
       fi
   
 checkout:
