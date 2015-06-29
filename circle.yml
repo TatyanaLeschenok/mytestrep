@@ -7,7 +7,7 @@ machine:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      npm install -g appium  # get appium;
+      npm install -g appium;
       ls mytestrep;
       ls;
       fi
