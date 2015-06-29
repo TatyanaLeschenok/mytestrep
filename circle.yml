@@ -7,7 +7,7 @@ machine:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      ls bin;
+      ls mytestrep;
       fi
   
 checkout:
