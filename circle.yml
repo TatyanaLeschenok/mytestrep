@@ -9,7 +9,12 @@ machine:
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       sh mytestrep/MyApplication/install_appium.sh;
       fi
-  
+  post:
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      sh mytestrep/MyApplication/run_appium.sh;
+      fi
+      
 checkout:
   post:
      - >
