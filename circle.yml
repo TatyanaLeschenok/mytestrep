@@ -8,6 +8,7 @@ machine:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       ls mytestrep;
+      ls;
       fi
   
 checkout:
