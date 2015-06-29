@@ -7,7 +7,7 @@ general:
   
 dependencies:
   pre:
-  - >
+    - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       echo "install appium"
       fi
