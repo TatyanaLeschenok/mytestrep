@@ -9,16 +9,6 @@ machine:
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       ./install_appium.sh;
       fi
-#   pre:
-#     - >
-#       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-#       echo "install appium";
-#       - brew install Caskroom/cask/java;
-#       - brew install maven;
-#       - brew install node;
-#       - npm install -g appium  # get appium;
-#       - npm install wd;
-#       fi
   
 checkout:
   post:
@@ -27,11 +17,6 @@ checkout:
       git clone git@github.com:rs/SDWebImage.git;
       fi
 dependencies:
-  pre:
-    - >
-      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      ./install_appium.sh;
-      fi
   post:
     - appium -p 4723 -a 127.0.0.1:
         background: true
