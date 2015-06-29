@@ -7,11 +7,7 @@ machine:
   pre:
   - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      - brew install Caskroom/cask/java
-      - brew install maven
-      - brew install node
-      - npm install -g appium  # get appium
-      - npm install wd  
+      echo "install appium"
       fi
     
   post:
