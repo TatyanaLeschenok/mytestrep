@@ -3,7 +3,19 @@ general:
   branches:
     only:
     - master
-machine:
+# machine:
+#   pre:
+#     - >
+#       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+#       echo "install appium";
+#       - brew install Caskroom/cask/java;
+#       - brew install maven;
+#       - brew install node;
+#       - npm install -g appium  # get appium;
+#       - npm install wd;
+#       fi
+  
+dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
@@ -14,14 +26,6 @@ machine:
       - npm install -g appium  # get appium;
       - npm install wd;
       fi
-  
-dependencies:
-  pre:
-    - >
-      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      echo "install appium";
-      fi
-    
   post:
     - appium -p 4723 -a 127.0.0.1:
         background: true
