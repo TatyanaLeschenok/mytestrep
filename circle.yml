@@ -19,9 +19,7 @@ dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      echo "install appium";
       npm install -g appium  # get appium;
-      npm install wd;
       fi
   post:
     - appium -p 4723 -a 127.0.0.1:
