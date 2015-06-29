@@ -9,7 +9,7 @@ dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      echo "install appium"
+      echo "install appium";
       fi
     
   post:
