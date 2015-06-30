@@ -7,7 +7,8 @@ machine:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      sh mytestrep/MyApplication/install_appium.sh;
+      npm install -g appium;
+      npm install wd;
       fi
   post:
     - >
