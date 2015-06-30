@@ -24,11 +24,7 @@ checkout:
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       git clone git@github.com:rs/SDWebImage.git;
       fi
-dependencies:
-  post:
-    - appium -p 4723 -a 127.0.0.1:
-        background: true
-    - sleep 5
+#dependencies:
   # pre:
   # - npm install -g appium  # get appium
   # - npm install wd
@@ -42,12 +38,12 @@ dependencies:
 #  override:
 #    - appium -p 4723 -a 127.0.0.1
 #    - mvn test
-  post:
-  - ./gradlew jacocoTestReport
-  - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
-  - cp -r app/build/reports/jacoco/jacocoTestReport/* $CIRCLE_ARTIFACTS 
-deployment:
-  master:
-    branch: master
-    commands:
-      - ./deploy_master.sh
+#  post:
+#  - ./gradlew jacocoTestReport
+#  - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
+#  - cp -r app/build/reports/jacoco/jacocoTestReport/* $CIRCLE_ARTIFACTS 
+#deployment:
+#  master:
+#    branch: master
+#    commands:
+#      - ./deploy_master.sh
