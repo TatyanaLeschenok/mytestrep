@@ -13,9 +13,7 @@ machine:
   post:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      appium -p 4724 -a 127.0.0.1:
-        background: true
-      sleep 5;
+      appium -p 4724 -a 127.0.0.1;
       fi
       
 checkout:
