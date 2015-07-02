@@ -34,7 +34,7 @@ echo  "batat-group" > "app/group_aliases.txt"
 
 buildDebug(){
 echo 'upload debug build to Fabric'
-    ./gradlew assembleDebug crashlyticsUploadDistributionDebug
+    #./gradlew assembleDebug crashlyticsUploadDistributionDebug
     cp -r app/build/outputs/apk/* $CIRCLE_ARTIFACTS
 }
 
