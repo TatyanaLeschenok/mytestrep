@@ -41,8 +41,8 @@ checkout:
 #  - ./gradlew jacocoTestReport
 #  - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
 #  - cp -r app/build/reports/jacoco/jacocoTestReport/* $CIRCLE_ARTIFACTS 
-#deployment:
-#  master:
-#    branch: master
-#    commands:
-#      - ./deploy_master.sh
+deployment:
+  master:
+    branch: master
+    commands:
+      - ./deploy_master.sh
