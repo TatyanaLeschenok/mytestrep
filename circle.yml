@@ -18,9 +18,9 @@ dependencies:
     npm install -g appium;
     npm install wd;
   post:
-    appium -p 4724 -a 127.0.0.1:
-      backgroud: true;
-    sleep 5;
+    - appium -p 4723 -a 127.0.0.1:
+        background: true
+    - sleep 5
       # fi
   # post:
   #   - >
