@@ -3,7 +3,15 @@ general:
   branches:
     only:
     - master
-machine:
+# machine:
+      
+checkout:
+  post:
+     - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      git clone git@github.com:rs/SDWebImage.git;
+      fi
+dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
@@ -16,14 +24,6 @@ machine:
       appium -p 4724 -a 127.0.0.1:
         backgroud: true;
       fi
-      
-checkout:
-  post:
-     - >
-      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      git clone git@github.com:rs/SDWebImage.git;
-      fi
-#dependencies:
   # pre:
   # - npm install -g appium  # get appium
   # - npm install wd
