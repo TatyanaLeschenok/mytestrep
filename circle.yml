@@ -3,9 +3,6 @@ general:
   branches:
     only:
     - master
-#machine:
-  
-      
 checkout:
   post:
      - >
@@ -23,37 +20,6 @@ dependencies:
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       sh ./run_appium.sh;
       fi
-  # pre:
-  #   # - >
-  #     # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-  #   - npm install -g appium
-  #   - npm install wd
-  # post:
-  #   - appium -p 4723 -a 127.0.0.1:
-  #       background: true
-  #   - sleep 5
-      # fi
-  # post:
-  #   - >
-  #     if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-  #     fi
-  # pre:
-  # - npm install -g appium  # get appium
-  # - npm install wd
-  # - appium -p 4723 -a 127.0.0.1
-  # - android list sdk
-  # - echo y | android update sdk --no-ui --all --filter 'extra,131'
-  # - chmod +x gradlew
-  # - ./gradlew clean
-  #- ./gradlew tasks --all
-#test:
-#  override:
-#    - appium -p 4723 -a 127.0.0.1
-#    - mvn test
-#  post:
-#  - ./gradlew jacocoTestReport
-#  - cp -r app/build/test-results/* $CIRCLE_TEST_REPORTS
-#  - cp -r app/build/reports/jacoco/jacocoTestReport/* $CIRCLE_ARTIFACTS 
 deployment:
   master:
     branch: master
