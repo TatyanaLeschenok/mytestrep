@@ -14,10 +14,15 @@ checkout:
       fi
 dependencies:
   pre:
-    - ls
-    - sh ./install_appium.sh
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      sh ./install_appium.sh;
+      fi
   post:
-    - sh ./run_appium.sh
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      sh ./run_appium.sh;
+      fi
   # pre:
   #   # - >
   #     # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
