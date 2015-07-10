@@ -4,6 +4,9 @@ general:
   branches:
     only:
     - master
+machine:
+  pre:
+    - ls
 checkout:
   post:
      - >
