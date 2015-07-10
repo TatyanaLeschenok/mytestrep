@@ -15,9 +15,9 @@ checkout:
 dependencies:
   pre:
     - ls
-    - ./install_appium.sh
+    - sh ./install_appium.sh
   post:
-    - ./run_appium.sh
+    - sh ./run_appium.sh
   # pre:
   #   # - >
   #     # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
