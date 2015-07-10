@@ -14,6 +14,7 @@ checkout:
       fi
 dependencies:
   pre:
+    - ls
     - install_appium.sh
   post:
     - run_appium.sh
