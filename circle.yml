@@ -17,6 +17,7 @@ dependencies:
       # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
     npm install -g appium;
     npm install wd;
+  post:
     appium -p 4724 -a 127.0.0.1:
       backgroud: true;
     sleep 5;
