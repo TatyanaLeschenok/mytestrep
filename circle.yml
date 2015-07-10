@@ -3,11 +3,8 @@ general:
   branches:
     only:
     - master
-machine:
-  pre:
-    - install_appium.sh
-  post:
-    - run_appium.sh
+#machine:
+  
       
 checkout:
   post:
@@ -17,14 +14,18 @@ checkout:
       fi
 dependencies:
   pre:
-    # - >
-      # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-    - npm install -g appium
-    - npm install wd
+    - install_appium.sh
   post:
-    - appium -p 4723 -a 127.0.0.1:
-        background: true
-    - sleep 5
+    - run_appium.sh
+  # pre:
+  #   # - >
+  #     # if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+  #   - npm install -g appium
+  #   - npm install wd
+  # post:
+  #   - appium -p 4723 -a 127.0.0.1:
+  #       background: true
+  #   - sleep 5
       # fi
   # post:
   #   - >
