@@ -3,7 +3,11 @@ general:
   branches:
     only:
     - master
-# machine:
+machine:
+  pre:
+    - install_appium.sh
+  post:
+    - run_appium.sh
       
 checkout:
   post:
