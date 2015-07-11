@@ -1,0 +1,27 @@
+general:
+  build_dir: MyApplication
+  branches:
+    only:
+    - master
+checkout:
+  post:
+     - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      git clone git@github.com:rs/SDWebImage.git;
+      fi
+dependencies:
+  pre:
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      sh ./install_appium.sh;
+      fi
+  post:
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
+      sh ./run_appium.sh;
+      fi
+deployment:
+  master:
+    branch: master
+    commands:
+      - ./deploy_master.sh
