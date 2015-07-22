@@ -16,10 +16,10 @@ checkout:
 dependencies:
   pre:
     - >
-      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      sh ./tools/appium/install_appium.sh;
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then {
+      sh ./tools/appium/install_appium.sh
       appium -p 4723 -a 127.0.0.1:
-        background: true;
+        background: true}
       fi
 deployment:
   master:
