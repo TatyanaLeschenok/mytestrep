@@ -18,11 +18,8 @@ dependencies:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
       sh ./tools/appium/install_appium.sh;
-      fi
-  post:
-    - >
-      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      appium -p 4723 -a 127.0.0.1 & ;
+      appium -p 4723 -a 127.0.0.1:
+        background: true;
       fi
 deployment:
   master:
