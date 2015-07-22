@@ -17,12 +17,12 @@ dependencies:
   pre:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      sh ./install_appium.sh;
+      sh ./tools/appium/install_appium.sh;
       fi
   post:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      sh ./run_appium.sh;
+      sh ./tools/appium/run_appium.sh;
       fi
 deployment:
   master:
