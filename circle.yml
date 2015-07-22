@@ -22,7 +22,7 @@ dependencies:
   post:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then
-      nohup appium -p 4723 -a 127.0.0.1 &;
+      appium -p 4723 -a 127.0.0.1 &;
       fi
 deployment:
   master:
