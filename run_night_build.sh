@@ -9,7 +9,8 @@ trigger_build_url=https://circleci.com/api/v1/project/${_project}/tree/${_branch
 post_data=$(cat <<EOF
 {
   "build_parameters": {
-    "RUN_NIGHTLY_BUILD": "true"
+    "RUN_NIGHTLY_BUILD": "true",
+    "ECHO_TEST" : "echo appium"
   }
 }
 EOF)
