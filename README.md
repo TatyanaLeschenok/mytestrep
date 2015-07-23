@@ -2,7 +2,7 @@
 
 ##Setup instruction
 
-should be installed:
+Should be installed:
 
 - node
 - java
@@ -15,11 +15,11 @@ brew install node      # get node.js
 npm install -g appium  # get appium
 npm install wd         # get appium client     
 ```
-###run appium for specific port in background
+###Run appium for specific port in background
 
 `appium -p 4723 -a 127.0.0.1 &`
 
-###run tests for specific platform
+###Run tests for specific platform
 
 `mvn test -Dplatform=<platform> -DappPath=<absolute_build_path>`
 
@@ -35,4 +35,8 @@ run specific test
 
 `mvn test -Dplatform=ios test -DappPath=<absolute_build_path> -Dtest=ios.FindClassesTest`
 
+### Easy way to run test on local machine
 
+1. checkout AppRepo
+2. checkout this repo inside AppRepo workingcopy
+3. run script
