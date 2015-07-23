@@ -20,7 +20,9 @@ dependencies:
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then 
       sh ./tools/appium/install_appium.sh;
       fi
-  ${ECHO_TEST}
+  post:
+    - 
+    ${ECHO_TEST}
 
 deployment:
   master:
