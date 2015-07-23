@@ -25,11 +25,14 @@ npm install wd         # get appium client
 
 for ios:
 
-`mvn test -Dplatform=ios`
+`mvn test -Dplatform=ios -DappPath=<absolute_build_path> -Dtest=ios.*`
 
 for android
 
-`mvn test -Dplatform=android`
+`mvn test -Dplatform=android -DappPath=<absolute_build_path> -Dtest=android.*`
 
 run specific test
-`mvn -Dtest=ios.FindClassesTest -Dplatform=ios test`
+
+`mvn test -Dplatform=ios test -DappPath=<absolute_build_path> -Dtest=ios.FindClassesTest`
+
+
