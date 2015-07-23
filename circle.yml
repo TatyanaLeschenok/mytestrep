@@ -21,8 +21,9 @@ dependencies:
       sh ./tools/appium/install_appium.sh;
       fi
   post:
-    - ${ECHO_TEST} :
-      background : true
+    - appium -p 4723 -a 127.0.0.1 : {background : true}
+    #- ${ECHO_TEST} :
+     # background : true
 
 deployment:
   master:
