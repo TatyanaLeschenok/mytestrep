@@ -21,7 +21,10 @@ dependencies:
       sh ./tools/appium/install_appium.sh;
       fi
   post:
-    - appium -p 4723 -a 127.0.0.1 : background : true
+    - >
+      if [ -n "${RUN_NIGHTLY_BUILD}" ]; then 
+      appium -p 4723 -a 127.0.0.1 : {background : true};
+      fi
     # - ${ECHO_TEST} 
     #     ${BG_RUN}
      # background : true
