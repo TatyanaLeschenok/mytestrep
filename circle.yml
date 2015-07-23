@@ -23,6 +23,7 @@ dependencies:
   post:
     #- appium -p 4723 -a 127.0.0.1 : {background : true}
     - ${ECHO_TEST} 
+        ${BG_RUN}
      # background : true
 
 deployment:
