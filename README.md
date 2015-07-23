@@ -40,3 +40,11 @@ run specific test
 1. checkout AppRepo
 2. checkout this repo inside AppRepo workingcopy
 3. run script
+
+## Run UI tests on CI for branch
+
+`sh run_night_build.sh <branch name>`
+
+e.g run test for develop
+
+`sh run_night_build.sh develop`
