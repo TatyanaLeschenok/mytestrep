@@ -21,7 +21,7 @@ dependencies:
       sh ./tools/appium/install_appium.sh;
       fi
   post:
-    ${ECHO_TEST}
+    - ${ECHO_TEST}
 
 deployment:
   master:
