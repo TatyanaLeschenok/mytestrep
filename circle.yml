@@ -23,7 +23,7 @@ dependencies:
   post:
     - >
       if [ -n "${RUN_NIGHTLY_BUILD}" ]; then 
-      appium -p 4723 -a 127.0.0.1 : {background : true};
+      nohup bash -c "appium -p 4723 -a 127.0.0.1 &";
       fi
     # - ${ECHO_TEST} 
     #     ${BG_RUN}
