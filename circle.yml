@@ -11,7 +11,7 @@ machine:
 checkout:
   post:
      - >
-      if [ "${RUN_NIGHTLY_BUILD}" ]; then
+      if [ -z "${RUN_NIGHTLY_BUILD}" ]; then
       git clone git@github.com:rs/SDWebImage.git;
       fi
 dependencies:
