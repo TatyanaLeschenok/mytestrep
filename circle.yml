@@ -4,3 +4,8 @@ general:
   branches:
     only:
     - master
+deployment:
+  acceptance:
+    branch: master
+    commands:
+    - ./tools/tag_build.sh
